@@ -1,4 +1,4 @@
-import { CaretCircleDoubleDown, Code, Cube } from "phosphor-react";
+import { CaretCircleDoubleDown, Cube } from "phosphor-react";
 import { ButtonScroll } from "../components/ButtonScroll";
 import { ContactButton } from "../components/ContactButton";
 import { Header } from "../components/Header";
@@ -8,6 +8,7 @@ export function Home() {
         <>
             <div className="bg-blur min-h-screen bg-cover bg-no-repeat bg-fixed">
                 <Header />
+                
                 <div className="flex flex-col items-center justify-items-center pt-40 p-3">
                     <Cube weight="duotone" size={90} className="text-green-500">
                         <animate
@@ -43,6 +44,7 @@ export function Home() {
                     </a>
                 </div>
             </div>
+            
             <div className="mt-[-1rem] flex justify-center">
                 <CaretCircleDoubleDown size={34} className="animate-bounce" />
             </div>
@@ -50,6 +52,7 @@ export function Home() {
             <div className="min-h-screen">
                 Placeholder
             </div>
+            
             <ButtonScroll />
             <ContactButton />
         </>

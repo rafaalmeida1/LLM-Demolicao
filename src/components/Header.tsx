@@ -18,11 +18,11 @@ export function Header() {
                     <NavLink
                         to='/'
                         className={` flex justify-center items-center bg-gray-100 text-gray-900 hover:bg-gray-900 hover:border hover:border-gray-100 hover:text-gray-100 h-[3rem] w-[3rem] rounded-lg  transition-colors duration-300`}
-                        style={path === '/' ? { 
-                         backgroundColor: '#09090A',
-                         borderColor: '#E1E1E6',
-                         borderWidth: '1px',
-                         color: '#E1E1E6'
+                        style={path === '/' ? {
+                            backgroundColor: '#09090A',
+                            borderColor: '#E1E1E6',
+                            borderWidth: '1px',
+                            color: '#E1E1E6'
                         } : {}}
                     >
                         <House size={24} />
@@ -31,12 +31,12 @@ export function Header() {
                     <NavLink
                         to='/about'
                         className={` flex justify-center items-center bg-gray-100 text-gray-900 hover:bg-gray-900 hover:border hover:border-gray-100 hover:text-gray-100 h-[3rem] w-[3rem] rounded-lg  transition-colors duration-300`}
-                        style={path === '/about' ? { 
+                        style={path === '/about' ? {
                             backgroundColor: '#09090A',
                             borderColor: '#E1E1E6',
                             borderWidth: '1px',
                             color: '#E1E1E6'
-                           } : {}}
+                        } : {}}
                     >
                         <UserList size={24} />
                     </NavLink>
@@ -44,12 +44,12 @@ export function Header() {
                     <NavLink
                         to='/contact'
                         className={` flex justify-center items-center bg-gray-100 text-gray-900 hover:bg-gray-900 hover:border hover:border-gray-100 hover:text-gray-100 h-[3rem] w-[3rem] rounded-lg  transition-colors duration-300`}
-                        style={path === '/contact' ? { 
+                        style={path === '/contact' ? {
                             backgroundColor: '#09090A',
                             borderColor: '#E1E1E6',
                             borderWidth: '1px',
                             color: '#E1E1E6',
-                           } : {}}
+                        } : {}}
                     >
                         <Phone size={24} />
                     </NavLink>
@@ -57,8 +57,8 @@ export function Header() {
                     <a
                         href='https://api.whatsapp.com/send?phone=5519992864222&text=Tenho%20interesse%20em%20seus%20servi%C3%A7os%20de%20Desenvolvimento. '
                         className={` flex justify-center items-center bg-gradient-to-r from-green-300 to-green-700 text-gray-100 border border-gray-100 
-                            hover:bg-gradient-to-l hover:from-gray-900 hover:border hover:text-green-500  
-                            h-[3rem] w-[5rem] rounded-lg  transition-all duration-75`}
+                            hover:bg-gradient-to-l hover:from-gray-900 hover:text-green-500  
+                            h-[3rem] w-[5rem] rounded-lg  transition-colors duration-100`}
                         target="_blank"
                     >
                         <ShoppingBag size={24} />
