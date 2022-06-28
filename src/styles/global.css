@@ -22,3 +22,7 @@ body::-webkit-scrollbar-track {
 body::-webkit-scrollbar-thumb {
     @apply bg-green-500 rounded-[20px] border border-gray-900;
 }
+
+*::selection {
+    @apply bg-green-600 text-white;
+}
