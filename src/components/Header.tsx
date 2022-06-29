@@ -25,11 +25,11 @@ export function Header() {
                 <div>
                     {!active ?
                         <div className="absolute right-6 z-20 top-5 cursor-pointer minLg:hidden ">
-                            <List size={40} onClick={showMenu} />
+                            <List size={40} onClick={showMenu} name="menu"/>
                         </div>    
                         :
                         <div className="absolute right-6 z-20 top-5 cursor-pointer minLg:hidden ">
-                            <X size={40} onClick={showMenu} />
+                            <X size={40} onClick={showMenu} name="close" />
                         </div>
                     }
 
@@ -85,7 +85,7 @@ export function Header() {
                         </a>
                     </ul>
 
-                    <NavMenuItems showMenu={showMenu} active={active} />
+                    <NavMenuItems active={active} />
                 </div>
             </header>
         </div>

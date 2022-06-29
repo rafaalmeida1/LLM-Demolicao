@@ -4,15 +4,14 @@ import { NavLink } from 'react-router-dom';
 //Menu responsivo
 
 interface NavMenuItemsProps {
-    showMenu: () => void;
     active: boolean;
 }
 
-export const NavMenuItems = ({ showMenu, active }: NavMenuItemsProps) => {
+export const NavMenuItems = ({ active }: NavMenuItemsProps) => {
     const path = window.location.pathname;
 
     return (
-        <ul className={active ? 'p-3 rounded-lg border flex-col justify-between flex fixed z-10 right-5 top-[4.5rem] uppercase bg-gray-900 gap-5 minLg:hidden' : 'hidden'}>
+        <ul className={active ? 'p-3 rounded-lg border flex-col flex fixed z-10 right-5 top-[4.5rem] minLg:right-[-15rem] uppercase bg-gray-900 gap-5 opacity-100 transition-all minLg:transition-none duration-500' : 'flex-col flex gap-5 p-3 fixed opacity-0 transition-all duration-500 right-[-15rem] top-[4.5rem]'}>
             <div className="flex gap-3">
                 <NavLink
                     to='/'
