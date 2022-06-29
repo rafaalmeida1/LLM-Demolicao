@@ -12,7 +12,7 @@ export const NavMenuItems = ({ showMenu, active }: NavMenuItemsProps) => {
     const path = window.location.pathname;
 
     return (
-        <ul className={active ? 'p-3 rounded border flex-col justify-between flex fixed z-10 right-5 top-[4.5rem] uppercase bg-gray-900 gap-5 minLg:hidden' : 'hidden'}>
+        <ul className={active ? 'p-3 rounded-lg border flex-col justify-between flex fixed z-10 right-5 top-[4.5rem] uppercase bg-gray-900 gap-5 minLg:hidden' : 'hidden'}>
             <div className="flex gap-3">
                 <NavLink
                     to='/'

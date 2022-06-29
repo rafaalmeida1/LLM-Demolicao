@@ -23,7 +23,6 @@ export function Header() {
                 </NavLink>
 
                 <div>
-
                     {!active ?
                         <div className="absolute right-6 z-20 top-5 cursor-pointer minLg:hidden ">
                             <List size={40} onClick={showMenu} />
