@@ -10,22 +10,8 @@ export function Home() {
                 <Header />
                 
                 <div className="flex flex-col items-center justify-items-center pt-40 p-3">
-                    <Cube weight="duotone" size={90} className="text-green-500">
-                        <animate
-                            values="0;1;0"
-                            dur="4s"
-                            repeatCount="indefinite"
-                        ></animate>
-                        <animateTransform
-                            attributeName="transform"
-                            attributeType="XML"
-                            type="rotate"
-                            dur="5s"
-                            from="0 0 0"
-                            to="360 0 0"
-                            repeatCount="indefinite"
-                        ></animateTransform>
-                    </Cube>
+                    <Cube weight="duotone" size={90} className="text-green-500 animate-spin-slow" />
+                      
                     <strong className="text-3xl md:text-2xl">Comprometimento e Eficiência</strong>
                     <p className="text-gray-100 text-center mt-5 text contrast-200">Encaixe seu negócio no mundo digital de forma inteligente e conquiste cada vez mais clientes</p>
 

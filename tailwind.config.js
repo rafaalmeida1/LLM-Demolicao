@@ -40,6 +40,9 @@ module.exports = {
           900: '#09090A'
         }
       },
+      animation: {
+        'spin-slow': 'spin 5s linear infinite',
+      },
     },
   },
   plugins: [],

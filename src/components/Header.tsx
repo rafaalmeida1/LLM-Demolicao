@@ -1,4 +1,4 @@
-import { House, Phone, ShoppingBag, UserList } from "phosphor-react";
+import { Cube, House, Phone, ShoppingBag, UserList } from "phosphor-react";
 import { NavLink } from "react-router-dom";
 
 export function Header() {
@@ -11,10 +11,10 @@ export function Header() {
                     to='/'
                     className={` text-white hover:text-gray-200 transition-colors duration-75`}
                 >
-                    <h2 className="text-4xl">Header</h2>
+                    <Cube size={48} className="text-green-500 hover:text-green-300 hover:animate-spin-slow"/>
                 </NavLink>
 
-                <div className="flex gap-3 group">
+                <ul className="flex gap-3 group">
                     <NavLink
                         to='/'
                         className={` flex justify-center items-center bg-gray-100 text-gray-900 hover:bg-gray-900 hover:border hover:border-gray-100 hover:text-gray-100 h-[3rem] w-[3rem] rounded-lg  transition-colors duration-300`}
@@ -56,14 +56,14 @@ export function Header() {
 
                     <a
                         href='https://api.whatsapp.com/send?phone=5519992864222&text=Tenho%20interesse%20em%20seus%20servi%C3%A7os%20de%20Desenvolvimento. '
-                        className={` flex justify-center items-center bg-gradient-to-r from-green-300 to-green-700 text-gray-100 border border-gray-100 
-                            hover:bg-gradient-to-l hover:from-gray-900 hover:text-green-500  
+                        className={` flex justify-center items-center bg-gray-100 text-gray-900 border border-gray-100 
+                            hover:bg-gray-900 hover:text-green-500  
                             h-[3rem] w-[5rem] rounded-lg  transition-colors duration-100`}
                         target="_blank"
                     >
                         <ShoppingBag size={24} />
                     </a>
-                </div>
+                </ul>
             </header>
         </div>
     )
