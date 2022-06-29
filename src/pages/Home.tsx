@@ -6,7 +6,7 @@ import { Header } from "../components/Header";
 export function Home() {
     return (
         <>
-            <div className="bg-blur min-h-screen bg-cover bg-no-repeat bg-fixed">
+            <div className="bg-blur min-h-screen bg-cover bg-no-repeat bg-fixed md:pb-3">
                 <Header />
                 
                 <div className="flex flex-col items-center justify-items-center pt-40 p-3">
