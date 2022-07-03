@@ -76,6 +76,7 @@ export function Header() {
                             </div>
                             :
                             <div 
+                            onClick={showContactMenu}
                             className="flex justify-center items-center bg-gray-900 text-gray-100 border border-gray-100 cursor-pointer
                             hover:opacity-70 h-[2.75rem] w-[2.75rem] rounded-lg  transition-colors duration-300"
                             >
