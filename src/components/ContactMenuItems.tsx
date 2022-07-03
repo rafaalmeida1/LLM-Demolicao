@@ -34,7 +34,7 @@ export const ContactMenuItems = ({ contactMenuActive, onShowContactMenu }: Conta
             className={
                 contactMenuActive
                     ? 'opacity-100 z-20 fixed right-0 top-0 p-3 pl-7 pr-7 transition-all duration-300 bg-gray-700 border-l-4 border-gray-500 rounded-lg h-screen'
-                    : 'opacity-0 z-[-1] fixed right-[-5rem] top-0 p-3 transition-all duration-300'
+                    : 'opacity-0 z-[-1] fixed right-[-5rem] top-0 p-3 transition-all duration-300 h-screen'
             }>
             <div className="flex flex-col relative">
                 <div className="flex flex-col gap-3 relative">
