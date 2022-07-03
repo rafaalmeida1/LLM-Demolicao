@@ -7,7 +7,7 @@ html {
 }
 
 body {
-    @apply bg-gray-900 text-gray-100 box-border;
+    @apply bg-gray-700 text-gray-100 box-border;
     -webkit-font-smoothing: antialiased;
 }
 

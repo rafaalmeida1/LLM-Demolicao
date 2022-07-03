@@ -6,12 +6,12 @@ import { Header } from "../components/Header";
 export function Home() {
     return (
         <>
+            <Header />  
             <div className="bg-blur min-h-screen bg-cover bg-no-repeat bg-fixed md:pb-3">
-                <Header />
-                
+
                 <div className="flex flex-col items-center justify-items-center pt-40 p-3">
                     <Cube weight="duotone" size={90} className="text-green-500 animate-spin-slow" />
-                      
+
                     <strong className="text-3xl md:text-2xl">Comprometimento e Eficiência</strong>
                     <p className="text-gray-100 text-center mt-5 text contrast-200">Encaixe seu negócio no mundo digital de forma inteligente e conquiste cada vez mais clientes</p>
 
@@ -30,7 +30,7 @@ export function Home() {
                     </a>
                 </div>
             </div>
-            
+
             <div className="mt-[-1rem] flex justify-center">
                 <CaretCircleDoubleDown size={34} className="animate-bounce" />
             </div>
@@ -38,7 +38,7 @@ export function Home() {
             <div className="min-h-screen">
                 Placeholder
             </div>
-            
+
             <ButtonScroll />
             <ContactButton />
         </>
