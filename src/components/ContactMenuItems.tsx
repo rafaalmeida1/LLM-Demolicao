@@ -1,4 +1,5 @@
 import { RocketLaunch, X } from "phosphor-react";
+import { useNavigate } from "react-router-dom";
 
 interface ContactMenuProps {
     contactMenuActive: boolean;
@@ -6,8 +7,28 @@ interface ContactMenuProps {
 }
 
 export const ContactMenuItems = ({ contactMenuActive, onShowContactMenu }: ContactMenuProps) => {
+    const navigate = useNavigate();
+
+    function handleSubmitContact(){
+        onShowContactMenu();
+
+        navigate('/');
+
+        const name = document.getElementById('name') as HTMLInputElement;
+        const email = document.getElementById('email') as HTMLInputElement;
+        const subject = document.getElementById('message') as HTMLInputElement;
+        const telephone = document.getElementById('telephone') as HTMLInputElement;
+        const message = document.getElementById('message') as HTMLInputElement;
+
+        name.value = '';
+        email.value = '';
+        subject.value = '';
+        telephone.value = '';
+        message.value = '';
+    }
+
     return (
-        <form action="https://app.us18.list-manage.com/subscribe/post?u=77607056527c427bdce6ecf42&amp;id=bff1a8cb0b"
+        <form onSubmit={handleSubmitContact} action="https://app.us18.list-manage.com/subscribe/post?u=77607056527c427bdce6ecf42&amp;id=bff1a8cb0b"
             method="post"
             id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" target="_blank" noValidate
             className={
@@ -23,11 +44,11 @@ export const ContactMenuItems = ({ contactMenuActive, onShowContactMenu }: Conta
                         className="absolute right-0 text-gray-100 cursor-pointer"
                     />
                     <div className="absolute left-[-5000px] z-[-1]" aria-hidden="true"><input type="text" name="b_77607056527c427bdce6ecf42_bff1a8cb0b" value=""/></div>
-                    <input type="text" name="NAME" className="flex-1 text-gray-900 border-2 border-gray-100 rounded-lg p-2 mt-[7rem]" placeholder="Nome" required />
-                    <input type="email" name="EMAIL" className="flex-1 text-gray-900 border-2 border-gray-100 rounded-lg p-2" placeholder="Email" required />
-                    <input type="text" name="SUBJECT" className="flex-1 text-gray-900 border-2 border-gray-100 rounded-lg p-2" placeholder="Assunto" />
-                    <input type="number" name="TELEPHONE" className="flex-1 text-gray-900 border-2 border-gray-100 rounded-lg p-2" placeholder="Telefone" />
-                    <textarea name="MESSAGE" className="flex-1 text-gray-900 border-2 border-gray-100 rounded-lg p-2 resize-none" placeholder="Mensagem" required />
+                    <input id="name" type="text" name="NAME" className="flex-1 text-gray-900 border-2 border-gray-100 rounded-lg p-2 mt-[7rem]" placeholder="Nome" required />
+                    <input id="email" type="email" name="EMAIL" className="flex-1 text-gray-900 border-2 border-gray-100 rounded-lg p-2" placeholder="Email" required />
+                    <input id="subject" type="text" name="SUBJECT" className="flex-1 text-gray-900 border-2 border-gray-100 rounded-lg p-2" placeholder="Assunto" />
+                    <input id="telephone" type="number" name="TELEPHONE" className="flex-1 text-gray-900 border-2 border-gray-100 rounded-lg p-2" placeholder="Telefone" />
+                    <textarea id="message" name="MESSAGE" className="flex-1 text-gray-900 border-2 border-gray-100 rounded-lg p-2 resize-none" placeholder="Mensagem" required />
                     <RocketLaunch size={60} className="absolute top-[26.5rem] right-[4.5rem] animate-pulse text-green-600" weight="duotone" />
                 </div>
 
