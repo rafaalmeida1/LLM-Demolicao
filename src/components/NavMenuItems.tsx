@@ -1,19 +1,17 @@
-import { House, Phone, ShoppingBag, UserList, X } from 'phosphor-react';
+import { House, Image, Phone, ShoppingBag, UserList, X } from 'phosphor-react';
 import { NavLink } from 'react-router-dom';
 
 //Menu responsivo
 
 interface NavMenuItemsProps {
     menuActive: boolean;
-    contactMenuActive: boolean;
-    onShowContactMenu: () => void;
 }
 
-export const NavMenuItems = ({ menuActive, contactMenuActive, onShowContactMenu }: NavMenuItemsProps) => {
+export const NavMenuItems = ({ menuActive }: NavMenuItemsProps) => {
     const path = window.location.pathname;
 
     return (
-        <ul className={menuActive ? 'flex flex-col p-3 rounded-lg border absolute z-10 minLg:z-[-1] right-5 top-[4.5rem] uppercase bg-gray-700 gap-5 opacity-100 transition-all minLg:transition-none duration-500' : 'flex-col flex right-5 top-[5rem] rounded-lg gap-5 p-3 fixed opacity-0 transition-all duration-500 z-[-1]'}>
+        <ul className={menuActive ? 'flex flex-col p-3 items-center rounded-lg border absolute z-10 minLg:z-[-1] right-5 top-[4.5rem] uppercase bg-gray-700 gap-5 opacity-100 transition-all minLg:transition-none duration-500' : 'flex-col flex right-5 top-[5rem] rounded-lg gap-5 p-3 fixed opacity-0 transition-all duration-500 z-[-1]'}>
             <div className="flex gap-3">
                 <NavLink
                     to='/'
@@ -28,36 +26,14 @@ export const NavMenuItems = ({ menuActive, contactMenuActive, onShowContactMenu 
                     <House size={24} />
                 </NavLink>
 
-                <NavLink
-                    to='/about'
-                    className={` flex justify-center items-center bg-gray-100 text-gray-900 hover:bg-gray-900 hover:border hover:border-gray-100 hover:text-gray-100 h-[3rem] w-[3rem] rounded-lg  transition-colors duration-300`}
-                    style={path === '/about' ? {
-                        backgroundColor: '#09090A',
-                        borderColor: '#E1E1E6',
-                        borderWidth: '1px',
-                        color: '#E1E1E6'
-                    } : {}}
-                >
-                    <UserList size={24} />
-                </NavLink>
-
-                {!contactMenuActive ?
-                    <div
-                        onClick={onShowContactMenu}
-                        className="flex justify-center items-center bg-gray-100 text-gray-900 border border-gray-100 cursor-pointer
+                <a href="tel:+5519992864222"
+                    className="flex justify-center items-center bg-gray-100 text-gray-900 border border-gray-100 cursor-pointer
                             hover:bg-gray-900 hover:text-gray-100 h-[2.75rem] w-[2.75rem] rounded-lg  transition-colors duration-300"
-                    >
-                        <Phone size={24} name="contact" />
-                    </div>
-                    :
-                    <div
-                        onClick={onShowContactMenu}
-                        className="flex justify-center items-center bg-gray-900 text-gray-100 border border-gray-100 cursor-pointer
-                            hover:opacity-70 h-[2.75rem] w-[2.75rem] rounded-lg  transition-colors duration-300"
-                    >
-                        <X size={24} name="close" />
-                    </div>
-                }
+                >
+                    <Phone size={24} name="contact" />
+                </a>
+
+
             </div>
 
             <div className="flex justify-center">

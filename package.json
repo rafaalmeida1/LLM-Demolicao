@@ -9,6 +9,8 @@
   },
   "dependencies": {
     "classnames": "^2.3.1",
+    "framer-motion": "^6.5.1",
+    "mdb-react-ui-kit": "^4.1.0",
     "phosphor-react": "^1.4.1",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",

@@ -1,21 +1,86 @@
 import { CaretCircleDoubleDown, Cube } from "phosphor-react";
 import { ButtonScroll } from "../components/ButtonScroll";
-import { ContactButton } from "../components/ContactButton";
 import { Header } from "../components/Header";
 
+import { motion, useTransform, useViewportScroll } from 'framer-motion';
+
+import staticImage from '../assets/staticImage.png'
+import { Footer } from "../components/Footer";
+import { ImageSlider } from "../components/ImageSlider";
+import { useRef } from "react";
+
 export function Home() {
+
+    function changeTextBLeftSide() {
+        let text: HTMLElement = document.querySelector('#h2-service') as HTMLElement
+        let buttonAccept: HTMLElement = document.querySelector('#button-accept-service') as HTMLElement
+        let buttonReject: HTMLButtonElement = document.querySelector('#button-reject-service') as HTMLButtonElement
+
+        setTimeout(() => {
+            text.innerText = 'É uma pena, mas espero que encontre o que procura!'
+            buttonAccept.innerText = 'Mudei de idéia';
+            buttonAccept.id = 'button-service-active';
+            buttonReject.id = 'button-service-disabled'
+        }, 300);
+    }
+
+    const constraintsRef = useRef<any>(null);
+
+    const { scrollYProgress } = useViewportScroll();
+
+    const imageSectionContactOpacity = useTransform(scrollYProgress, [0.124, 0.343], [0, 1]);
+    const textSectionContactOpacity = useTransform(scrollYProgress, [0.230, 0.320], [0, 1]);
+
+    const buttonAcceptContactX = useTransform(scrollYProgress, [0.230, 0.343], [-40, 0]);
+    const buttonAcceptContactOpacity = useTransform(scrollYProgress, [0.230, 0.343], [0, 1]);
+    const buttonRejectContactX = useTransform(scrollYProgress, [0.230, 0.343], [40, 0]);
+    const buttonRejectContactOpacity = useTransform(scrollYProgress, [0.230, 0.343], [0, 1]);
+
+    const titleHomePageOpacity = useTransform(scrollYProgress, [0, 0.230], [1, 0]);
+
+    const pHomePageOpacity = useTransform(scrollYProgress, [0, 0.240], [1, 0]);
+
+    const buttonHomePageOpacity = useTransform(scrollYProgress, [0, 0.240], [1, 0]);
+
     return (
         <>
-            <Header />  
-            <div className="bg-blur min-h-screen bg-cover bg-no-repeat bg-fixed md:pb-3">
+            <Header />
+            {/* Section 1 Presentation */}
+            <div className="bg-blur min-h-screen bg-cover bg-center bg-no-repeat bg-fixed md:pb-3">
 
-                <div className="flex flex-col items-center justify-items-center pt-40 p-3">
-                    <Cube weight="duotone" size={90} className="text-green-500 animate-spin-slow" />
+                <div className="flex flex-col items-center justify-items-center md:pt-[10rem] pt-[15rem] p-3">
+                    <motion.div ref={constraintsRef}>
+                        <motion.div drag dragConstraints={constraintsRef} whileTap={{cursor:"grabbing"}} className="cursor-grab">
+                            <Cube weight="duotone" size={90} className="text-green-500 animate-spin-slow" />
+                        </motion.div>
+                    </motion.div>
 
-                    <strong className="text-3xl md:text-2xl">Comprometimento e Eficiência</strong>
-                    <p className="text-gray-100 text-center mt-5 text contrast-200">Encaixe seu negócio no mundo digital de forma inteligente e conquiste cada vez mais clientes</p>
+                    <motion.strong
+                        style={{
+                            opacity: titleHomePageOpacity,
+                        }}
+                        initial={{x: 300, opacity: 0}}
+                        animate={{x: 0, opacity: 1}}
+                        exit={{x: -300, opacity: 0}}
+                        transition={{duration: 1}}
+                        className="text-3xl md:text-2xl text-center">
+                        Comprometimento, Eficiência e Segurança
+                    </motion.strong>
+                    <motion.p 
+                        style={{
+                            opacity: pHomePageOpacity,
+                        }}
+                        initial={{opacity: 0}}
+                        animate={{opacity: 1}}
+                        exit={{opacity: 0}}
+                        transition={{duration: 1}}
+                        className="text-gray-100 text-center mt-5 text contrast-200">Encaixe seu negócio no mundo digital de forma inteligente e conquiste cada vez mais clientes
+                    </motion.p>
 
-                    <a
+                    <motion.a
+                        style={{
+                            opacity: buttonHomePageOpacity,
+                        }}
                         href="https://api.whatsapp.com/send?phone=5519992864222&text=Tenho%20interesse%20em%20seus%20servi%C3%A7os%20de%20Desenvolvimento. "
                         className="
                         flex justify-center border border-green-500 items-center mt-7 h-[4rem] w-[10rem] rounded-tl-3xl rounded-br-3xl bg-gradient-to-r from-green-300 to-green-700 transition-all duration-300    
@@ -27,20 +92,61 @@ export function Home() {
                         target="_blank"
                     >
                         SAIBA MAIS
-                    </a>
+                    </motion.a>
                 </div>
             </div>
 
-            <div className="mt-[-1rem] flex justify-center">
+            <div className="mt-[-3rem] flex justify-center">
                 <CaretCircleDoubleDown size={34} className="animate-bounce" />
             </div>
 
-            <div className="min-h-screen">
-                Placeholder
+
+            {/* Section 2 Second Contact */}
+            <div className="min-h-screen md:min-h-fit md:pb-6">
+                <motion.div className="flex items-center justify-center w-auto gap-5">
+                    <motion.div className="flex flex-col items-center gap-5">
+                        <motion.h2
+                            style={{
+                                opacity: textSectionContactOpacity
+                            }}
+                            id="h2-service" className="md:text-xl text-3xl font-bold text-gray-900 md:mt-0 mt-10 text-center">Você gostaria de um serviço de demolição<br />de segurança e qualidade</motion.h2>
+
+                        <div className="flex gap-3">
+                            <motion.a
+                                style={{
+                                    x: buttonAcceptContactX,
+                                    opacity: buttonAcceptContactOpacity
+                                }}
+                                id="button-accept-service"
+                                className="flex justify-center items-center bg-gray-900 border text-gray-100 hover:bg-transparent hover:border border-gray-900 hover:text-gray-900 h-[2.75rem] w-[2.75rem] rounded-lg transition-colors duration-300"
+                                href="https://api.whatsapp.com/send?phone=5519992864222&text=Ol%C3%A1%2C%20Eu%20tenho%20interesse%20em%20seus%20servi%C3%A7os%20de%20demoli%C3%A7%C3%A3o"
+                            >
+                                Sim
+                            </motion.a>
+                            <motion.button
+                                style={{
+                                    x: buttonRejectContactX,
+                                    opacity: buttonRejectContactOpacity
+                                }}
+                                onClick={changeTextBLeftSide}
+                                id="button-reject-service"
+                                className="flex justify-center items-center bg-gray-900 border text-gray-100 hover:bg-transparent hover:border border-gray-900 hover:text-gray-900 h-[2.75rem] w-[2.75rem] rounded-lg transition-colors duration-300">
+                                Não
+                            </motion.button>
+                        </div>
+                    </motion.div>
+
+                    <motion.img style={{opacity:imageSectionContactOpacity}} src={staticImage} className="w-[40vw] h-[80vh] md:w-[50%] md:h-auto md:mt-10 mt-20" />
+                </motion.div>
+            </div>
+
+            {/* Section 3 ScrollImages */}
+            <div className="min-h-screen md:min-h-fit md:pb-6 bg-gray-200">
+                <ImageSlider />
             </div>
 
             <ButtonScroll />
-            <ContactButton />
+            <Footer />
         </>
     )
 }
