@@ -8,6 +8,7 @@ import staticImage from '../assets/staticImage.png'
 import { Footer } from "../components/Footer";
 import { ImageSlider } from "../components/ImageSlider";
 import { useRef } from "react";
+import { LocaleMaps } from "../components/LocaleMap";
 
 export function Home() {
 
@@ -96,13 +97,13 @@ export function Home() {
                 </div>
             </div>
 
-            <div className="mt-[-3rem] flex justify-center">
+            <div className="mt-[-9rem] flex justify-center">
                 <CaretCircleDoubleDown size={34} className="animate-bounce" />
             </div>
 
 
             {/* Section 2 Second Contact */}
-            <div className="min-h-screen md:min-h-fit md:pb-6">
+            <div className="min-h-screen md:min-h-fit md:pb-6 mt-[5rem]">
                 <motion.div className="flex items-center justify-center w-auto gap-5">
                     <motion.div className="flex flex-col items-center gap-5">
                         <motion.h2
@@ -143,6 +144,10 @@ export function Home() {
             {/* Section 3 ScrollImages */}
             <div className="min-h-screen md:min-h-fit md:pb-6 bg-gray-200">
                 <ImageSlider />
+            </div>
+
+            <div className="min-h-screen md:min-h-fit p-6 bg-gray-700">
+                <LocaleMaps />
             </div>
 
             <ButtonScroll />
