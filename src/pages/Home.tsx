@@ -29,19 +29,19 @@ export function Home() {
 
     const { scrollYProgress } = useViewportScroll();
 
-    const imageSectionContactOpacity = useTransform(scrollYProgress, [0.124, 0.343], [0, 1]);
-    const textSectionContactOpacity = useTransform(scrollYProgress, [0.230, 0.320], [0, 1]);
+    const imageSectionContactOpacity = useTransform(scrollYProgress, [0.186, 0.236], [0, 1]);
+    const textSectionContactOpacity = useTransform(scrollYProgress, [0.186, 0.236], [0, 1]);
 
-    const buttonAcceptContactX = useTransform(scrollYProgress, [0.230, 0.343], [-40, 0]);
-    const buttonAcceptContactOpacity = useTransform(scrollYProgress, [0.230, 0.343], [0, 1]);
-    const buttonRejectContactX = useTransform(scrollYProgress, [0.230, 0.343], [40, 0]);
-    const buttonRejectContactOpacity = useTransform(scrollYProgress, [0.230, 0.343], [0, 1]);
+    const buttonAcceptContactX = useTransform(scrollYProgress, [0.186, 0.236], [-40, 0]);
+    const buttonAcceptContactOpacity = useTransform(scrollYProgress, [0.186, 0.236], [0, 1]);
+    const buttonRejectContactX = useTransform(scrollYProgress, [0.186, 0.236], [40, 0]);
+    const buttonRejectContactOpacity = useTransform(scrollYProgress, [0.186, 0.236], [0, 1]);
 
     const titleHomePageOpacity = useTransform(scrollYProgress, [0, 0.230], [1, 0]);
 
     const pHomePageOpacity = useTransform(scrollYProgress, [0, 0.240], [1, 0]);
 
-    const buttonHomePageOpacity = useTransform(scrollYProgress, [0, 0.240], [1, 0]);
+    const buttonHomePageOpacity = useTransform(scrollYProgress, [0, 0.236], [1, 0]);
 
     return (
         <>
@@ -146,7 +146,7 @@ export function Home() {
                 <ImageSlider />
             </div>
 
-            <div className="min-h-screen md:min-h-fit p-6 bg-gray-700">
+            <div className="w-full min-h-screen md:min-h-fit p-6 bg-gray-700">
                 <LocaleMaps />
             </div>
 
