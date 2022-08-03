@@ -13,12 +13,12 @@ export function ImageSlider(){
 
     const { scrollYProgress } = useViewportScroll();
 
-    const titleImageSectionOpacity = useTransform(scrollYProgress, [0.485, 0.568], [0, 1]);
-    const titleImageSectionX = useTransform(scrollYProgress, [0.485, 0.568], [-40, 0]);
+    const titleImageSectionOpacity = useTransform(scrollYProgress, [0.327, 0.388], [0, 1]);
+    const titleImageSectionX = useTransform(scrollYProgress, [0.327, 0.388], [-40, 0]);
 
-    const hrImageSectionOpacity = useTransform(scrollYProgress, [0.485, 0.568], [0, 1]);
+    const hrImageSectionOpacity = useTransform(scrollYProgress, [0.327, 0.388], [0, 1]);
 
-    const imageScrollOpacity = useTransform(scrollYProgress, [0.485, 0.588], [0, 1]);
+    const imageScrollOpacity = useTransform(scrollYProgress, [0.327, 0.408], [0, 1]);
 
 
     return(

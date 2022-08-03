@@ -14,7 +14,7 @@ export function LocaleMaps() {
 
     return (
         <div
-            className="h-[100vh]">
+            className="h-[60vh]">
             {isLoaded && (
                 <GoogleMap
                     mapContainerStyle={{ width: '100%', height: '100%' }}

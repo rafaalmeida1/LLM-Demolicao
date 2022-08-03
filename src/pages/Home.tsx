@@ -43,6 +43,11 @@ export function Home() {
 
     const buttonHomePageOpacity = useTransform(scrollYProgress, [0, 0.236], [1, 0]);
 
+    const textSectionMapsOpacity = useTransform(scrollYProgress, [0.186, 0.236], [0, 1]);
+    const pSectionMapsOpacity = useTransform(scrollYProgress, [0.186, 0.236], [0, 1]);
+    const buttonSectionMapsOpacity = useTransform(scrollYProgress, [0.186, 0.236], [0, 1]);
+
+
     return (
         <>
             <Header />
@@ -51,7 +56,7 @@ export function Home() {
 
                 <div className="flex flex-col items-center justify-items-center md:pt-[10rem] pt-[15rem] p-3">
                     <motion.div ref={constraintsRef}>
-                        <motion.div drag dragConstraints={constraintsRef} whileTap={{cursor:"grabbing"}} className="cursor-grab">
+                        <motion.div drag dragConstraints={constraintsRef} whileTap={{ cursor: "grabbing" }} className="cursor-grab">
                             <Cube weight="duotone" size={90} className="text-green-500 animate-spin-slow" />
                         </motion.div>
                     </motion.div>
@@ -60,21 +65,21 @@ export function Home() {
                         style={{
                             opacity: titleHomePageOpacity,
                         }}
-                        initial={{x: 300, opacity: 0}}
-                        animate={{x: 0, opacity: 1}}
-                        exit={{x: -300, opacity: 0}}
-                        transition={{duration: 1}}
+                        initial={{ x: 300, opacity: 0 }}
+                        animate={{ x: 0, opacity: 1 }}
+                        exit={{ x: -300, opacity: 0 }}
+                        transition={{ duration: 1 }}
                         className="text-3xl md:text-2xl text-center">
                         Comprometimento, Eficiência e Segurança
                     </motion.strong>
-                    <motion.p 
+                    <motion.p
                         style={{
                             opacity: pHomePageOpacity,
                         }}
-                        initial={{opacity: 0}}
-                        animate={{opacity: 1}}
-                        exit={{opacity: 0}}
-                        transition={{duration: 1}}
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        exit={{ opacity: 0 }}
+                        transition={{ duration: 1 }}
                         className="text-gray-100 text-center mt-5 text contrast-200">Encaixe seu negócio no mundo digital de forma inteligente e conquiste cada vez mais clientes
                     </motion.p>
 
@@ -137,7 +142,7 @@ export function Home() {
                         </div>
                     </motion.div>
 
-                    <motion.img style={{opacity:imageSectionContactOpacity}} src={staticImage} className="w-[40vw] h-[80vh] md:w-[50%] md:h-auto md:mt-10 mt-20" />
+                    <motion.img style={{ opacity: imageSectionContactOpacity }} src={staticImage} className="w-[40vw] h-[80vh] md:w-[50%] md:h-auto md:mt-10 mt-20" />
                 </motion.div>
             </div>
 
@@ -147,6 +152,49 @@ export function Home() {
             </div>
 
             <div className="w-full min-h-screen md:min-h-fit p-6 bg-gray-700">
+                <div className="flex justify-center items-center flex-col">
+                    <motion.h2
+                        style={{
+                            opacity: textSectionMapsOpacity
+                        }}
+                        id="h2-maps" className="md:text-2xl text-3xl font-bold text-green-500 md:mt-0 mt-10 text-center">
+                        Localização
+                    </motion.h2>
+                    <motion.p
+                        style={{
+                            opacity: pSectionMapsOpacity
+                        }}
+                        id="p-maps" className="text-gray-100 text-center mt-5 text contrast-200 flex gap-2 md:flex-col">
+                        <motion.span className="text-gray-100">
+                            Rua dos Bobos, nº 0,
+                        </motion.span>
+                        <motion.span className="text-gray-100">
+                            Bairro: Centro,
+                        </motion.span>
+                        <motion.span className="text-gray-100">
+                            Cidade: São Paulo,
+                        </motion.span>
+                        <motion.span className="text-gray-100">
+                            Estado: SP,
+                        </motion.span>
+                        <motion.span className="text-gray-100">
+                            CEP: 04500-000
+                        </motion.span>
+                    </motion.p>
+
+                    <motion.a
+                        style={{
+                            opacity: buttonSectionMapsOpacity
+                        }}
+                        href="https://www.google.com/maps/place/Rua+dos+Bobos,+n%C2%BA+0,+Bairro+Centro,+S%C3%A3o+Paulo,+SP,+04500-000/@-23.56401,-46.63301,17z/data=!3m1!4b1!4m5!3m4!1s0x94ce59f8f8f8f8f8:0x9f8f8f8f8f8f8f8f8!8m2!3d-23.56401!4d-46.63103"
+                        id="button-maps"
+                        className="flex justify-center items-center bg-gray-100 border border-gray-900 text p-3 my-2 text-gray-900
+                        hover:bg-transparent hover:border hover:border-gray-100 hover:text-gray-100 rounded-lg transition-colors duration-300"
+                        target="_blank"
+                    >
+                        Abrir no Google Maps
+                    </motion.a>
+                </div>
                 <LocaleMaps />
             </div>
 
