@@ -53,7 +53,6 @@ export function Home() {
             <Header />
             {/* Section 1 Presentation */}
             <div className="bg-blur min-h-screen bg-cover bg-center bg-no-repeat bg-fixed md:pb-3">
-
                 <div className="flex flex-col items-center justify-items-center md:pt-[10rem] pt-[15rem] p-3">
                     <motion.div ref={constraintsRef}>
                         <motion.div drag dragConstraints={constraintsRef} whileTap={{ cursor: "grabbing" }} className="cursor-grab">
@@ -80,14 +79,14 @@ export function Home() {
                         animate={{ opacity: 1 }}
                         exit={{ opacity: 0 }}
                         transition={{ duration: 1 }}
-                        className="text-gray-100 text-center mt-5 text contrast-200">Encaixe seu negócio no mundo digital de forma inteligente e conquiste cada vez mais clientes
+                        className="text-gray-100 text-center mt-5 text contrast-200">Venha adquirir um serviço de demolição de qualidade e segurança.
                     </motion.p>
 
                     <motion.a
                         style={{
                             opacity: buttonHomePageOpacity,
                         }}
-                        href="https://api.whatsapp.com/send?phone=5519992864222&text=Tenho%20interesse%20em%20seus%20servi%C3%A7os%20de%20Desenvolvimento. "
+                        href="https://api.whatsapp.com/send?phone=5519989656856&text=Ol%C3%A1%2C%20quero%20saber%20mais%20a%20respeito%20dos%20seus%20servi%C3%A7os%20de%20demoli%C3%A7%C3%A3o!"
                         className="
                         flex justify-center border border-green-500 items-center mt-7 h-[4rem] w-[10rem] rounded-tl-3xl rounded-br-3xl bg-gradient-to-r from-green-300 to-green-700 transition-all duration-300    
                         hover:rounded-tr-3xl hover:rounded-bl-3xl 
@@ -126,6 +125,7 @@ export function Home() {
                                 id="button-accept-service"
                                 className="flex justify-center items-center bg-gray-900 border text-gray-100 hover:bg-transparent hover:border border-gray-900 hover:text-gray-900 h-[2.75rem] w-[2.75rem] rounded-lg transition-colors duration-300"
                                 href="https://api.whatsapp.com/send?phone=5519992864222&text=Ol%C3%A1%2C%20Eu%20tenho%20interesse%20em%20seus%20servi%C3%A7os%20de%20demoli%C3%A7%C3%A3o"
+                                target="_blank"
                             >
                                 Sim
                             </motion.a>
@@ -151,7 +151,8 @@ export function Home() {
                 <ImageSlider />
             </div>
 
-            <div className="w-full min-h-screen md:min-h-fit p-6 bg-gray-700">
+            {/* Section 4 Maps */}
+            <div className="w-full min-h-screen md:min-h-fit p-6 bg-gray-700"> 
                 <div className="flex justify-center items-center flex-col">
                     <motion.h2
                         style={{

@@ -32,6 +32,14 @@ export const NavMenuItems = ({ menuActive }: NavMenuItemsProps) => {
                 >
                     <Phone size={24} name="contact" />
                 </a>
+                {/* 
+                <a href="tel:+5519989656856"
+                    className="flex justify-center items-center bg-gray-100 text-gray-900 border border-gray-100 cursor-pointer
+                    hover:bg-gray-900 hover:text-gray-100 h-[2.75rem] w-[2.75rem] rounded-lg  transition-colors duration-300"
+                >
+                    <Phone size={24} name="contact" />
+                </a> 
+                */}
 
 
             </div>

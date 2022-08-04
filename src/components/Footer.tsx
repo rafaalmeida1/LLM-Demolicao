@@ -38,18 +38,19 @@ export function Footer() {
 
                         <div className='flex flex-col mx-auto mb-4 text-left gap-1'>
                             <h6 className='uppercase font-bold mb-4'>Contact</h6>
-                            <a href="" className="flex items-center no-underline md:text-sm">
+                            <a 
+                                href="https://www.google.com/maps/place/Rua+dos+Bobos,+n%C2%BA+0,+Bairro+Centro,+S%C3%A3o+Paulo,+SP,+04500-000/@-23.56401,-46.63301,17z/data=!3m1!4b1!4m5!3m4!1s0x94ce59f8f8f8f8f8:0x9f8f8f8f8f8f8f8f8!8m2!3d-23.56401!4d-46.63103" 
+                                className="flex items-center no-underline md:text-sm">
                                 <House size={24} /> New York, NY 10012, US
                             </a>
-                            <a href="" className="flex items-center no-underline md:text-sm">
+                            <a 
+                                href="mailto:rafhgamerbr@gmail.com" 
+                                className="flex items-center no-underline md:text-sm">
                                 <Envelope size={24} />
-                                info@example.com
+                                rafhgamerbr@gmail.com
                             </a>
-                            <a href="" className="flex items-center no-underline md:text-sm">
-                                <Phone size={24} /> + 01 234 567 88
-                            </a>
-                            <a href="" className="flex items-center md:text-sm">
-                                <Phone size={24} /> + 01 234 567 89
+                            <a href="tel:+5519989656856" className="flex items-center no-underline md:text-sm">
+                                <Phone size={24} /> +55 19 98965-6856
                             </a>
                         </div>
                     </div>

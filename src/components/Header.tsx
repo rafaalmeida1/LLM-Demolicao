@@ -50,16 +50,23 @@ export function Header() {
                             <House size={24} />
                         </NavLink>
 
-                        <div
+                        <a href="tel:+5519992864222"
                             className="flex justify-center items-center bg-gray-100 text-gray-900 border border-gray-100 cursor-pointer
                             hover:bg-gray-900 hover:text-gray-100 h-[2.75rem] w-[2.75rem] rounded-lg  transition-colors duration-300"
                         >
                             <Phone size={24} name="contact" />
-                        </div>
+                        </a>
+                        {/* <a href="tel:+5519989656856"
+                            className="flex justify-center items-center bg-gray-100 text-gray-900 border border-gray-100 cursor-pointer
+                            hover:bg-gray-900 hover:text-gray-100 h-[2.75rem] w-[2.75rem] rounded-lg  transition-colors duration-300"
+                        >
+                            <Phone size={24} name="contact" />
+                        </a> */}
+
 
 
                         <a
-                            href='https://api.whatsapp.com/send?phone=5519992864222&text=Tenho%20interesse%20em%20seus%20servi%C3%A7os%20de%20Desenvolvimento. '
+                            href='https://api.whatsapp.com/send?phone=5519989656856&text=Ol%C3%A1%2C%20Fiquei%20interessado%20em%20seus%20servi%C3%A7os%20de%20demoli%C3%A7%C3%A3o%2C%20e%20queria%20fazer%20um%20or%C3%A7amento%20sem%20compromisso.'
                             className={` flex justify-center items-center bg-gray-100 text-gray-900 border border-gray-100 
                             hover:bg-gray-900 hover:text-green-500  
                             h-[2.75rem] w-[5rem] rounded-lg  transition-colors duration-100
