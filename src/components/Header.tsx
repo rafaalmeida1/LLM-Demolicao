@@ -27,7 +27,7 @@ export function Header() {
                 </NavLink>
 
                 <div>
-                    <div className="absolute right-6 z-20 top-5 cursor-pointer minLg:hidden">
+                    <div className="absolute right-6 z-20 top-7 cursor-pointer minLg:hidden">
                         <MenuHamburguer showMenu={showMenu} menuActive={menuActive} />
                     </div>
 
