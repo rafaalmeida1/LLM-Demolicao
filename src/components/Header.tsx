@@ -4,6 +4,7 @@ import { NavLink } from "react-router-dom";
 import { NavMenuItems } from "./NavMenuItems";
 
 import logoImage from '../assets/logo.png';
+import { MenuHamburguer } from "./MenuHamburguer";
 
 export function Header() {
     const path = window.location.pathname;
@@ -26,15 +27,9 @@ export function Header() {
                 </NavLink>
 
                 <div>
-                    {!menuActive ?
-                        <div className="absolute right-6 z-20 top-5 cursor-pointer minLg:hidden ">
-                            <List size={40} className="text-green-500 hover:text-green-300 " onClick={showMenu} />
-                        </div>
-                        :
-                        <div className="absolute right-6 z-20 top-5 cursor-pointer minLg:hidden">
-                            <X size={40} className="text-green-500 hover:text-green-300 " onClick={showMenu} />
-                        </div>
-                    }
+                    <div className="absolute right-6 z-20 top-5 cursor-pointer minLg:hidden">
+                        <MenuHamburguer showMenu={showMenu} menuActive={menuActive} />
+                    </div>
 
                     <ul className="hidden minLg:flex minLg:gap-3 group">
                         <NavLink
