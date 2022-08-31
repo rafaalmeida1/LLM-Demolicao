@@ -8,8 +8,8 @@ export function LocaleMaps() {
     })
 
     const position = {
-        lat: -22.895802,
-        lng: -47.146506
+        lat: -22.9501036868231,
+        lng: -47.05982012450875
     }
 
     return (
@@ -21,7 +21,7 @@ export function LocaleMaps() {
                     center={position}
                     zoom={15}
                 >
-                    <a href="https://goo.gl/maps/Fvzzscn67DvuGdPo6" target="_blank">
+                    <a href="https://goo.gl/maps/CcqEwfFhCXX3HJu1A" target="_blank">
                         <Marker position={position} options={{
                             label: {
                                 text: 'LLM Demolições',

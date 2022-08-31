@@ -6,20 +6,6 @@ import logoImage from '../assets/logo.png';
 export function Footer() {
     return (
         <footer className='text-center text-base bg-gray-900'>
-            <section className='flex justify-center p-4 border-b gap-2'>
-                <div className='me-5 d-none d-lg-block'>
-                    <span>Nos encontre nas redes sociais:</span>
-                </div>
-
-                <div className="flex gap-1">
-                    <a href='' className='me-4 text-reset'>
-                        <FacebookLogo size={24} className='text-gray-500 hover:text-gray-300' />
-                    </a>
-                    <a href='' className='me-4 text-reset'>
-                        <InstagramLogo size={24} className='text-gray-500 hover:text-gray-300' />
-                    </a>
-                </div>
-            </section>
 
             <section className='flex'>
                 <div className='container text-left mt-5'>
@@ -31,23 +17,23 @@ export function Footer() {
                             </div>
                             <p className="md:text-sm">
                                 Nós da Demolidora Baltazar estamos aqui dispostos a fazer o melhor pelo nossos clientes.
-                                A Demolidora Baltazar está no mercado a 19 anos a fim de fazer seus trabalhos com rapidez segurança e qualidade.
+                                A Demolidora Baltazar está a fim de fazer seus trabalhos com comprometimento, eficiência e segurança.
                             </p>
                         </div>
 
 
                         <div className='flex flex-col mx-auto mb-4 text-left gap-1'>
-                            <h6 className='uppercase font-bold mb-4'>Contact</h6>
+                            <h6 className='uppercase font-bold mb-4'>Contato</h6>
                             <a 
-                                href="https://www.google.com/maps/place/Rua+dos+Bobos,+n%C2%BA+0,+Bairro+Centro,+S%C3%A3o+Paulo,+SP,+04500-000/@-23.56401,-46.63301,17z/data=!3m1!4b1!4m5!3m4!1s0x94ce59f8f8f8f8f8:0x9f8f8f8f8f8f8f8f8!8m2!3d-23.56401!4d-46.63103" 
+                                href="https://www.google.com.br/maps/place/Rua+Lincoln+Claudino+Gomes+Júnior,+141+-+Parque+da+Figueira,+Campinas+-+SP,+13040-230/@-22.9502667,-47.0643316,17z/data=!3m1!4b1!4m5!3m4!1s0x94c8c94b1c32ee01:0x117181a3d4d01cb1!8m2!3d-22.9502717!4d-47.0598416" 
                                 className="flex items-center no-underline md:text-sm">
-                                <House size={24} /> New York, NY 10012, US
+                                <House size={24} /> Pq da Figueira, Campinas, BR
                             </a>
                             <a 
-                                href="mailto:rafhgamerbr@gmail.com" 
+                                href="mailto:llm.baltazar@gmail.com" 
                                 className="flex items-center no-underline md:text-sm">
                                 <Envelope size={24} />
-                                rafhgamerbr@gmail.com
+                                llm.baltazar@gmail.com
                             </a>
                             <a href="tel:+5519989656856" className="flex items-center no-underline md:text-sm">
                                 <Phone size={24} /> +55 19 98965-6856
@@ -57,11 +43,12 @@ export function Footer() {
                 </div>
             </section>
 
-            <div className="flex justify-center text-center p-4 bg-black text-gray-200 gap-1 md:text-xs md:flex-col">
+            <div className="flex flex-col justify-center text-center p-4 bg-black text-gray-200 gap-1 md:text-xs md:flex-col">
                 <p>© 2022 Demolidora Baltazar. Todos os direitos reservados. </p>
                 <p>
                     Desenvolvido por <a href="https://github.com/rafaalmeida1" target="_blank" rel="noreferrer" className="hover:text-gray-400 transition-all">Rafael Almeida</a>
                 </p>
+                <p>CNPJ: 07.613.744/0001-20</p>
             </div>
         </footer>
     );

@@ -101,7 +101,7 @@ export function Home() {
                 </div>
             </div>
 
-            <div className="mt-[-9rem] flex justify-center">
+            <div className="mt-[-7rem] flex justify-center">
                 <CaretCircleDoubleDown size={34} className="animate-bounce" />
             </div>
 
@@ -167,19 +167,19 @@ export function Home() {
                         }}
                         id="p-maps" className="text-gray-100 text-center mt-5 text contrast-200 flex gap-2 md:flex-col">
                         <motion.span className="text-gray-100">
-                            Rua dos Bobos, nº 0,
+                        Rua Lincoln Claudino Gomes Júnior, nº 141,
                         </motion.span>
                         <motion.span className="text-gray-100">
-                            Bairro: Centro,
+                            Bairro: Parque da Figueira,
                         </motion.span>
                         <motion.span className="text-gray-100">
-                            Cidade: São Paulo,
+                            Cidade: Campinas,
                         </motion.span>
                         <motion.span className="text-gray-100">
                             Estado: SP,
                         </motion.span>
                         <motion.span className="text-gray-100">
-                            CEP: 04500-000
+                            CEP: 13040-230
                         </motion.span>
                     </motion.p>
 
@@ -187,7 +187,7 @@ export function Home() {
                         style={{
                             opacity: buttonSectionMapsOpacity
                         }}
-                        href="https://www.google.com/maps/place/Rua+dos+Bobos,+n%C2%BA+0,+Bairro+Centro,+S%C3%A3o+Paulo,+SP,+04500-000/@-23.56401,-46.63301,17z/data=!3m1!4b1!4m5!3m4!1s0x94ce59f8f8f8f8f8:0x9f8f8f8f8f8f8f8f8!8m2!3d-23.56401!4d-46.63103"
+                        href="https://www.google.com.br/maps/place/Rua+Lincoln+Claudino+Gomes+Júnior,+141+-+Parque+da+Figueira,+Campinas+-+SP,+13040-230/@-22.9502667,-47.0643316,17z/data=!3m1!4b1!4m5!3m4!1s0x94c8c94b1c32ee01:0x117181a3d4d01cb1!8m2!3d-22.9502717!4d-47.0598416"
                         id="button-maps"
                         className="flex justify-center items-center bg-gray-100 border border-gray-900 text p-3 my-2 text-gray-900
                         hover:bg-transparent hover:border hover:border-gray-100 hover:text-gray-100 rounded-lg transition-colors duration-300"
@@ -198,6 +198,7 @@ export function Home() {
                 </div>
                 <LocaleMaps />
             </div>
+
 
             <ButtonScroll />
             <Footer />
